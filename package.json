@@ -44,10 +44,10 @@
   "scripts": {
     "docs": "npm-run-all docs:*",
     "docs:lint": "markdownlint *.md",
-    "docs:spell": "mdspell -a -n -x --en-us",
+    "docs:spell": "npm run mdspell -- *.md",
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint . --ext=js,json",
-    "lint:md": "npm run docs:*",
+    "lint:md": "npm run docs",
     "mdspell": "mdspell -a -n -x --en-us",
     "precommit": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1"
