@@ -1,4 +1,3 @@
-/* eslint-ignore */
 module.exports = {
   env: {
     es6: true,
