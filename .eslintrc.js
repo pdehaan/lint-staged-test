@@ -1,10 +1,12 @@
+/* eslint-ignore */
 module.exports = {
   env: {
     es6: true,
     node: true
   },
   extends: [
-    "eslint:recommended"
+    "eslint:recommended",
+    "plugin:prettier/recommended"
   ],
   plugins: [
     "json",
