@@ -28,11 +28,12 @@
       "git add"
     ],
     "*.json": [
-      "prettier-eslint --write",
+      "eslint --ext=json",
+      "prettier --write",
       "git add"
     ],
     "*.md": [
-      "mdspell -a -n -r -x --en-us",
+      "npm run mdspell -- -r",
       "prettier --write",
       "git add"
     ]
@@ -46,7 +47,8 @@
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint . --ext=js,json",
     "lint:md": "markdownlint *.md",
-    "lint:md:spell": "mdspell -a -n -x --en-us *.md",
+    "lint:md:spell": "npm run mdspell -- *.md",
+    "mdspell": "mdspell -a -n -x --en-us",
     "precommit": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
