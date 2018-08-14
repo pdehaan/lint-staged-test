@@ -37,6 +37,10 @@
       "npm run mdspell -- -r",
       "prettier --write",
       "git add"
+    ],
+    "package.json": [
+      "npx fixpack@latest",
+      "git add"
     ]
   },
   "main": "index.js",
