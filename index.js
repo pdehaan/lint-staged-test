@@ -4,6 +4,6 @@ const foo = "bar";
 const baz = "foo";
 
 console.log(`Hello Wold` + "Barn");
-console.log(foo);
+console.log(foo, baz);
 
 console.log(data.json, data.strings);
