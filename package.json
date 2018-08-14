@@ -7,7 +7,7 @@
     "url": "https://github.com/pdehaan/lint-staged-test/issues"
   },
   "devDependencies": {
-       "eslint": "5.3.0",
+    "eslint": "5.3.0",
     "eslint-config-prettier": "3.0.1",
     "eslint-plugin-json": "1.2.1",
     "eslint-plugin-prettier": "2.6.2",
@@ -33,21 +33,21 @@
       "git add"
     ],
     "*.md": [
+      "markdownlint",
       "npm run mdspell -- -r",
       "prettier --write",
       "git add"
     ]
   },
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pdehaan/lint-staged-test.git"
-  },
+  "repository": "pdehaan/lint-staged-test",
   "scripts": {
+    "docs": "npm-run-all docs:*",
+    "docs:lint": "markdownlint *.md",
+    "docs:spell": "mdspell -a -n -x --en-us",
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint . --ext=js,json",
-    "lint:md": "markdownlint *.md",
-    "lint:md:spell": "npm run mdspell -- *.md",
+    "lint:md": "npm run docs:*",
     "mdspell": "mdspell -a -n -x --en-us",
     "precommit": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1"
